@@ -9,7 +9,11 @@
         [name]="controlName" 
         [formControlName]='controlName'>
     <mat-error *ngIf="validacao.hasErrorValidar(formControl,'required')">CAMPO OBRIGATORIO</mat-error>
-    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'min')">VALOR MINIMO 0</mat-error>
-    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'max')">VALOR MAXIMO 10</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'min')">
+      VALOR MINIMO {{validacao.lengthValidar(formControl,'min')}}
+    </mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl,'max')">
+      VALOR MAXIMO {{validacao.lengthValidar(formControl,'max')}}
+    </mat-error>
   </mat-form-field>
 </div>
