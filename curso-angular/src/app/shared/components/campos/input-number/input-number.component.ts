@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup, AbstractControl } from '@angular/forms';
+import { ValidarCamposService } from '../validar-campos.service';
 
 @Component({
-  selector: 'input-number',
+  selector: 'dio-input-number',
   templateUrl: './input-number.component.html',
   styleUrls: ['./input-number.component.scss']
 })
-export class InputNumberComponent implements OnInit {
+export class InputNumberComponent  {
+  @Input() titulo: string;
+  @Input() formGroup: FormGroup;
+  @Input() controlName: string;
+  
+  @Input() minimo=0;
+  @Input() maximo=10;
+  @Input() step=1;
 
-  constructor() { }
+  constructor(public validacao: ValidarCamposService) { }
 
-  ngOnInit() {
+  get formControl(): AbstractControl {
+    return this.formGroup.controls[this.controlName];
   }
 
 }
