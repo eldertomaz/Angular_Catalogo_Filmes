@@ -179,6 +179,26 @@
       "urlIMDb": "",
       "genero": "Medieval",
       "id": 18
+    },
+    {
+      "titulo": "123",
+      "urlFoto": "",
+      "dtLancamento": "2021-03-08T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 19
+    },
+    {
+      "titulo": "123",
+      "urlFoto": "",
+      "dtLancamento": "2021-03-23T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Anime",
+      "id": 20
     }
   ]
 }
