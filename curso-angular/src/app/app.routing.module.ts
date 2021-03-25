@@ -18,19 +18,27 @@ const routes: Routes = [
       {
         path: '',
         component: ListagemFilmesComponent
-      },{
-        path: ':id',
-        component: VisualizarFilmesComponent
       },
       {
         path: 'cadastro',
-        component: CadastroFilmesComponent,
+        children:[
+          {
+            path:'',
+            component: CadastroFilmesComponent,
+          },
+          {
+            path:':id',
+            component: CadastroFilmesComponent,
+          }
+        ]
+      },{
+        path: ':id',
+        component: VisualizarFilmesComponent,
         pathMatch: 'full'
       }
     ]
   },
   { path: '**', redirectTo: 'filmes' },
-
 ];
 
 @NgModule({

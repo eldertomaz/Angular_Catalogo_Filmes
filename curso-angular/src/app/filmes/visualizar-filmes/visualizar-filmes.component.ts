@@ -28,8 +28,11 @@ export class VisualizarFilmesComponent implements OnInit {
     this.visualizar();
   }
 
-  excluir(): void{
+  editar(): void{
+    this.router.navigateByUrl('/filmes/cadastro/'+ this.id);
+  }
 
+  excluir(): void{
     const config={
       data:{
         titulo: 'Quer deletar?',
